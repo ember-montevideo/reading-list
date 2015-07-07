@@ -26,3 +26,7 @@ Luego creo una propiedad calculada para filtrar la lista. Ahí me doy cuenta
 que preciso que los modelos sean Ember.Object.
 
 También aprovecho para ordenar la lista.
+
+## 4. Reemplazo todos los listados por el componente
+
+Reemplazo y hago que se filtre por el shelve que le paso al componente
