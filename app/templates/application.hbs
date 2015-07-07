@@ -32,6 +32,24 @@
   </nav>
   <div class="main">
     <div class="article">
+
+      <article class="book-group">
+        <h3>To read next
+          <span>({{model.length}})</span>
+        </h3>
+        <div class="content">
+          <ol>
+            {{#each model as |book|}}
+            <li>
+              <a href="#">{{book.title}}</a>
+              <a class="year" href="by_year.html">({{book.publicationDate}})</a> -
+              <a href="biography.html">{{book.author}}</a>
+            </li>
+            {{/each}}
+          </ol>
+        </div>
+      </article>
+
       <article class="book-group">
         <h3>To read next
           <span>(6)</span>
