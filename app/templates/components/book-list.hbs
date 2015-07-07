@@ -1,0 +1,16 @@
+<article class="book-group">
+  <h3>To read next
+    <span>({{filteredBooks.length}})</span>
+  </h3>
+  <div class="content">
+    <ol>
+      {{#each filteredBooks as |book|}}
+      <li>
+        <a href="#">{{book.title}}</a>
+        <a class="year" href="by_year.html">({{book.publicationDate}})</a> -
+        <a href="biography.html">{{book.author}}</a>
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+</article>

@@ -16,3 +16,13 @@ Copiamos la lista de modelos del README de `ten` y le agregamos un atributo
 
 Listamos todos los libros de una para ver como conectamos el modelo con el
 template.
+
+## 3. Pasar la lista de libros a un componente
+
+Y que filtre la lista de libros por un `shelve`.
+
+Primero muevo el template al componente y veo como se engancha facil.
+Luego creo una propiedad calculada para filtrar la lista. Ahí me doy cuenta
+que preciso que los modelos sean Ember.Object.
+
+También aprovecho para ordenar la lista.

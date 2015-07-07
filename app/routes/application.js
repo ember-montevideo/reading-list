@@ -48,12 +48,14 @@ let books = [
     "title": "All the King’s Men",
     "publicationDate": "1946",
     "author": "Robert Penn Warren",
-    "shelves": ['next']
+    "shelves": ["next"]
   }
 ];
 
 export default Ember.Route.extend({
   model: function() {
-    return books;
+    return books
+      .map(b => Ember.Object.create(b))
+      .sortBy('title');
   }
 });
