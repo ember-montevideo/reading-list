@@ -1,3 +1,98 @@
-<h2 id="title">Welcome to Ember.js</h2>
-
-{{outlet}}
+<header class="header">
+  <h1>Reading list</h1>
+</header>
+<div class="container">
+  <nav class="nav-bar">
+    <ul>
+      <li>
+        <a href="index.html" class="is-active">Dashboard</a>
+      </li>
+      <li>
+        <a href="to_read.html">To read next</a>
+      </li>
+      <li>
+        <a href="to_buy.html">To buy</a>
+      </li>
+      <li>
+        <a href="search.html">Search</a>
+      </li>
+      <li>
+        <a href="history.html">History</a>
+      </li>
+    </ul>
+    <p>group by</p>
+    <ul>
+      <li>
+        <a href="by_author.html">author</a>
+      </li>
+      <li>
+        <a href="by_year.html">year</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="main">
+    <div class="article">
+      <article class="book-group">
+        <h3>To read next
+          <span>(6)</span>
+        </h3>
+        <div class="content">
+          <ol>
+            <li>
+              <a href="#">All the King’s Men</a>
+              <a class="year" href="by_year.html">(1946)</a> -
+              <a href="biography.html">Robert Penn Warren</a>
+            </li>
+            <li>
+              <a href="#">Lord of the Flies</a>
+              <a class="year" href="by_year.html">(1955)</a> -
+              <a href="biography.html">William Golding</a>
+            </li>
+            <li>
+              <a href="#">To Kill a Mockingbird</a>
+              <a class="year" href="by_year.html">(1960)</a> -
+              <a href="biography.html">Harper Lee</a>
+            </li>
+            <li>
+              <a href="#">Ubik</a>
+              <a class="year" href="by_year.html">(1969)</a> -
+              <a href="biography.html">Philip K. Dick</a>
+            </li>
+          </ol>
+          <p>
+          <a href="to_read.html" class="more">view more...</a>
+          </p>
+        </div>
+      </article>
+      <article class="book-group">
+        <h3>To buy
+          <span>(1)</span>
+        </h3>
+        <div class="content">
+          <ol>
+            <li>
+              <a href="#">Ubik</a>
+              <a class="year" href="by_year.html">(1969)</a> -
+              <a href="biography.html">Philip K. Dick</a>
+              <a href="#" class="action" onclick="javascript:alert('Remove book from this list');">Bought</a>
+            </li>
+          </ol>
+        </div>
+      </article>
+      <article class="book-group">
+        <h3>History
+          <span>(1)</span>
+        </h3>
+        <div class="content">
+          <ol>
+            <li>
+              <a href="#">I, Claudius</a>
+              <a class="year" href="by_year.html">(1934)</a> -
+              <a href="biography.html">Robert Graves</a>
+            </li>
+          </ol>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
