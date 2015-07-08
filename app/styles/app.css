@@ -142,17 +142,17 @@ button:focus, button:hover {
   margin-left: 13px;
 }
 
-.nav-bar a.is-active {
+.nav-bar a.active {
   color: #dfdfdf;
   margin-left: 0;
 }
 
-.nav-bar a.is-active:hover {
+.nav-bar a.active:hover {
   text-decoration: none;
   cursor: default;
 }
 
-.nav-bar a.is-active:before {
+.nav-bar a.active:before {
   content: '\25CF\20';
   opacity: 0.2;
 }

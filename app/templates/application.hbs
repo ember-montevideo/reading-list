@@ -5,10 +5,10 @@
   <nav class="nav-bar">
     <ul>
       <li>
-        <a href="index.html" class="is-active">Dashboard</a>
+        {{link-to 'Dashboard' 'index'}}
       </li>
       <li>
-        <a href="to_read.html">To read next</a>
+        {{link-to 'To read next' 'next'}}
       </li>
       <li>
         <a href="to_buy.html">To buy</a>
@@ -31,13 +31,6 @@
     </ul>
   </nav>
   <div class="main">
-    <div class="article">
-
-      {{book-list books=model title="To read next" shelve="next"}}
-
-      {{book-list books=model title="To buy" shelve="buy"}}
-
-      {{book-list books=model title="History" shelve="history"}}
-    </div>
+    {{outlet}}
   </div>
 </div>

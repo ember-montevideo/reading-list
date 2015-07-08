@@ -30,3 +30,8 @@ También aprovecho para ordenar la lista.
 ## 4. Reemplazo todos los listados por el componente
 
 Reemplazo y hago que se filtre por el shelve que le paso al componente
+
+## 5. Creo la ruta next
+
+Vemos que la ruta de inicio es `index` y no `application`
+Vemos como las rutas y los templates se anidan
