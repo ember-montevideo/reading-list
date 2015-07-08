@@ -1,26 +1,21 @@
 import Ember from 'ember';
 
-let books = [
-  {
-    "OCLC": 35022004,
-    "title": "Microserfs",
-    "publicationDate": "1995",
-    "author": "Douglas Coupland",
-    "shelves": ["next"]
-  },
-  {
-    "OCLC": 34818133,
-    "title": "Do Androids Dream of Electric Sheep?",
-    "publicationDate": "1968",
-    "author": "Philip K. Dick",
-    "shelves": ["next"]
-  }
-];
+let $ = Ember.$;
+
+function docToBook(doc) {
+  return Ember.Object.create({
+    key: doc.key,
+    title: doc.title,
+    author: (doc.author_name && doc.author_name[0]) || 'Unknown Author',
+    publicationDate: doc.first_publish_year
+  });
+}
 
 export default Ember.Route.extend({
   model: function(params) {
-    return books
-      .map(b => Ember.Object.create(b))
-      .sortBy('title');
+    let term = encodeURIComponent(params.term);
+
+    return $.getJSON(`https://openlibrary.org/search.json?q=${term}&limit=30&callback=`)
+      .then(r => r.docs.map(docToBook).sortBy('title'));
   }
 });

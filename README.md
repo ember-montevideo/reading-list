@@ -46,3 +46,76 @@ Es lo mismo
 
 Agrego la ruta y el template. Agrego la subruta result y vemos como funciona
 Luego agrego la accion search y la engancho con el valor del input
+
+## 9. Leer resultados del servicio web
+
+La URL es https://openlibrary.org/search.json?q=the+lord+of+the+rings donde tenemos
+que usar + en vez de espacios.
+
+El formato del resultado tiene la siguiente estructura:
+
+Un primer nivel con la cantidad de resultados
+
+```
+{
+    "numFound": 629,
+    "docs": [
+        {...},
+        {...},
+        {...},
+        ...
+        {...}]
+}
+```
+
+y cada resultado dentro de `docs` tiene el siguiente formato
+
+```
+{
+    cover_i: 258027,
+    has_fulltext: true,
+    edition_count: 120,
+    title: "The Lord of the Rings",
+    author_name: [
+        "J. R. R. Tolkien"
+    ],
+    first_publish_year: 1954,
+    key: "OL27448W",
+    ia: [
+        "returnofking00tolk_1",
+        "lordofrings00tolk_1",
+        "lordofrings00tolk_0",
+        "lordofrings00tolk_3",
+        "lordofrings00tolk_2",
+        "lordofrings00tolk",
+        "twotowersbeingse1970tolk",
+        "lordofring00tolk",
+        "lordofrings56tolk",
+        "lordofringstolk00tolk",
+        "fellowshipofring00tolk_0"
+    ],
+    author_key: [
+        "OL26320A"
+    ],
+    public_scan_b: true
+}
+```
+
+Configurar CORS
+
+```
+if (environment === 'development') {
+  ENV.contentSecurityPolicy = {
+    'default-src': "'self' http://localhost:4200",
+    'connect-src': "'self' http://localhost:4200 https://openlibrary.org"
+  }
+}
+```
+
+Tips
+
+Para usar JSONP y limitar la cantidad:
+
+```
+return $.getJSON('https://openlibrary.org/search.json?q=' + term + '&limit=30&callback=')
+```
