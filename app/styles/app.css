@@ -65,7 +65,7 @@ button {
   border: 1px solid;
 }
 
-html, body {
+html, body, body > div {
   height: 100%;
 }
 
