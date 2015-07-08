@@ -7,6 +7,8 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('next');
+  this.route('buy');
+  this.route('history');
 });
 
 export default Router;

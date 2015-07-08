@@ -35,3 +35,7 @@ Reemplazo y hago que se filtre por el shelve que le paso al componente
 
 Vemos que la ruta de inicio es `index` y no `application`
 Vemos como las rutas y los templates se anidan
+
+## 6. Agregar las rutas `to buy` y `history`
+
+Es lo mismo
