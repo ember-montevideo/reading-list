@@ -119,3 +119,9 @@ Para usar JSONP y limitar la cantidad:
 ```
 return $.getJSON('https://openlibrary.org/search.json?q=' + term + '&limit=30&callback=')
 ```
+
+## 10. Show spinner on searching
+
+Agregar el template loading...
+
+Se puede usar un spinner de aca http://tobiasahlin.com/spinkit/
