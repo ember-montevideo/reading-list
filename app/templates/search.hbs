@@ -1,0 +1,8 @@
+<article class="search">
+  <fieldset>
+    {{input value=term placeholder="book title or author name..."}}
+    <button {{action 'search' term}}>Search</button>
+  </fieldset>
+
+  {{outlet}}
+</article>

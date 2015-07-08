@@ -14,7 +14,7 @@
         {{link-to 'To buy' 'buy'}}
       </li>
       <li>
-        <a href="search.html">Search</a>
+        {{link-to 'Search' 'search'}}
       </li>
       <li>
         {{link-to 'History' 'history'}}
@@ -31,6 +31,8 @@
     </ul>
   </nav>
   <div class="main">
-    {{outlet}}
+    <div class="article">
+      {{outlet}}
+    </div>
   </div>
 </div>

@@ -9,6 +9,9 @@ Router.map(function() {
   this.route('next');
   this.route('buy');
   this.route('history');
+  this.route('search', function() {
+    this.route('result', { path: ':term' });
+  });
 });
 
 export default Router;

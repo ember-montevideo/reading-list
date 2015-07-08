@@ -39,3 +39,10 @@ Vemos como las rutas y los templates se anidan
 ## 6. Agregar las rutas `to buy` y `history`
 
 Es lo mismo
+
+## 7. Arreglamos el estilo para que agarre el 100% en altura
+
+## 8. Agregamos la ruta search
+
+Agrego la ruta y el template. Agrego la subruta result y vemos como funciona
+Luego agrego la accion search y la engancho con el valor del input
