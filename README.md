@@ -140,4 +140,11 @@ a REST adapter.
 Al configurar REST adapter a nivel de application estamos configurando que es el
 adaptador por defecto para todos los modelos.
 
-## 2.
+## 2. Formato de fecha
+
+Usamos el addon ember-moment que utiliza la librería momentjs para formatos de
+fechas.
+
+```
+ember install ember-moment
+```
