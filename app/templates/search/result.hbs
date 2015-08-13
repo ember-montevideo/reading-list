@@ -7,8 +7,10 @@
       <a class="year" href="by_year.html">({{moment-format book.publicationDate 'YYYY'}})</a> -
       <a href="biography.html">{{book.author}}</a>
       <a class="action" {{action 'createBook' book}}>to read next</a>
+      <!--
       <a href="#" class="action">to buy</a>
       <a href="#" class="action">mark as read</a>
+      -->
     </li>
     {{/each}}
   </ol>

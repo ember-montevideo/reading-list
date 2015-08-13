@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('search', function() {
     this.route('result', { path: ':term' });
   });
+  this.route('book', { path: 'books/:book_id' });
 });
 
 export default Router;

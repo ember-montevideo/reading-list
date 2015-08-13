@@ -159,3 +159,8 @@ un modelo.
 Creamos una acción en los resultados de la busqueda y creamos un nuevo libro con
 el resultado seleccionado. Luego guardamos el nuevo libro, una vez guardado
 navegamos a la lista de `next to read`.
+
+## 5. Add book detail page with delete action
+
+Crear la ruta con el template y luego agregar un comando que elimine un
+registro.
