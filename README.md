@@ -148,3 +148,8 @@ fechas.
 ```
 ember install ember-moment
 ```
+
+## 3. Migrar el buscador a ember-data
+
+Separar la implementación actual del buscador en un adaptader, un serializador y
+un modelo.
