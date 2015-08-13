@@ -1,4 +1,4 @@
-# Paso a paso
+# Rutas y componentes
 
 ## 1. Copiar assets y HTML
 
@@ -125,3 +125,19 @@ return $.getJSON('https://openlibrary.org/search.json?q=' + term + '&limit=30&ca
 Agregar el template loading...
 
 Se puede usar un spinner de aca http://tobiasahlin.com/spinkit/
+
+# Ember data
+
+## 1. Crear un modelo para books y configurar el adaptador para REST
+
+Levantamos el servidor de desarrollo con la configuración de proxy y apuntamos
+a nuestro servidor API `ember serve --proxy http://localhost:3000`. Estamos
+asumiendo que nuestro servidor API está levantado en localhost:3000.
+
+Creamos el modelo con las propiedades básicas y luego configuramos el adaptador
+a REST adapter.
+
+Al configurar REST adapter a nivel de application estamos configurando que es el
+adaptador por defecto para todos los modelos.
+
+## 2.
