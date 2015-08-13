@@ -153,3 +153,9 @@ ember install ember-moment
 
 Separar la implementación actual del buscador en un adaptader, un serializador y
 un modelo.
+
+## 4. Crear un libro a partir del resultado de una búsqueda
+
+Creamos una acción en los resultados de la busqueda y creamos un nuevo libro con
+el resultado seleccionado. Luego guardamos el nuevo libro, una vez guardado
+navegamos a la lista de `next to read`.
