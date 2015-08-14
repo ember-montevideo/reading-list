@@ -7,7 +7,7 @@
       {{#each filteredBooks as |book|}}
       <li>
         <a href="#">{{book.title}}</a>
-        <a class="year" href="by_year.html">({{book.publicationDate}})</a> -
+        <a class="year" href="by_year.html">({{moment-format book.publicationDate 'YYYY'}})</a> -
         <a href="biography.html">{{book.author}}</a>
       </li>
       {{/each}}
