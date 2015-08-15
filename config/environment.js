@@ -21,8 +21,9 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     ENV.contentSecurityPolicy = {
-      'default-src': "'self' http://localhost:4200",
-      'connect-src': "'self' http://localhost:4200 https://openlibrary.org"
+      'default-src': "'self'",
+      'connect-src': "'self' https://openlibrary.org",
+      'script-src': "'self' https://www.wikidata.org"
     }
   }
 
