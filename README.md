@@ -1,4 +1,4 @@
-# Paso a paso
+# Rutas y componentes
 
 ## 1. Copiar assets y HTML
 
@@ -125,3 +125,45 @@ return $.getJSON('https://openlibrary.org/search.json?q=' + term + '&limit=30&ca
 Agregar el template loading...
 
 Se puede usar un spinner de aca http://tobiasahlin.com/spinkit/
+
+# Ember data
+
+Para esta sección puedes utilizar una versión online del API en
+https://reading-list-api.herokuapp.com
+
+## 1. Crear un modelo para books y configurar el adaptador REST
+
+Levantamos el servidor de desarrollo con la configuración de proxy y apuntamos
+a nuestro servidor API `ember serve --proxy http://localhost:3000`. Estamos
+asumiendo que nuestro servidor API está levantado en localhost:3000.
+
+Creamos el modelo con las propiedades básicas y luego configuramos el adaptador
+a REST adapter.
+
+Al configurar REST adapter a nivel de application estamos configurando que es el
+adaptador por defecto para todos los modelos.
+
+## 2. Formato de fecha
+
+Usamos el addon ember-moment que utiliza la librería momentjs para formatos de
+fechas.
+
+```
+ember install ember-moment
+```
+
+## 3. Migrar el buscador a ember-data
+
+Separar la implementación actual del buscador en un adaptader, un serializador y
+un modelo.
+
+## 4. Crear un libro a partir del resultado de una búsqueda
+
+Creamos una acción en los resultados de la busqueda y creamos un nuevo libro con
+el resultado seleccionado. Luego guardamos el nuevo libro, una vez guardado
+navegamos a la lista de `next to read`.
+
+## 5. Add book detail page with delete action
+
+Crear la ruta con el template y luego agregar un comando que elimine un
+registro.

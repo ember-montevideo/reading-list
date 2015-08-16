@@ -34,6 +34,10 @@ a, a:link, a:visited, a:active, a:hover {
   font: inherit;
 }
 
+a:not([href]) {
+  cursor: pointer;
+}
+
 a:hover {
   text-decoration: underline;
 }
