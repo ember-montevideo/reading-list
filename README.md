@@ -128,7 +128,10 @@ Se puede usar un spinner de aca http://tobiasahlin.com/spinkit/
 
 # Ember data
 
-## 1. Crear un modelo para books y configurar el adaptador para REST
+Para esta sección puedes utilizar una versión online del API en
+https://reading-list-api.herokuapp.com
+
+## 1. Crear un modelo para books y configurar el adaptador REST
 
 Levantamos el servidor de desarrollo con la configuración de proxy y apuntamos
 a nuestro servidor API `ember serve --proxy http://localhost:3000`. Estamos
